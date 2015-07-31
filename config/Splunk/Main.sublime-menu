@@ -1,0 +1,28 @@
+[
+     {
+        "id": "tools",
+        "children":
+        [{
+            "caption": "SublimeREPL",
+            "mnemonic": "r",
+            "id": "SublimeREPL",
+            "children":
+            [
+                {"command": "repl_open", 
+                 "caption": "Splunk",
+                 "id": "repl_splunk",
+                 "mnemonic": "spl",
+                 "args": {
+                    "type": "subprocess",
+                    "encoding": "utf8",
+                    "cmd": {"linux": ["node", "${packages}/SublimeREPL/config/Splunk/node_modules/splunkrepl/splunkrepl.js"],
+                            "osx": ["/Users/glennblock/.nvm/v0.12.7/bin/node", "${packages}/SublimeREPL/config/Splunk/node_modules/splunkrepl/splunkrepl.js","--host=https://localhost:8089", "--user=admin", "--pwd=changeme"],
+                            "windows": ["node.exe", "${packages}/SublimeREPL/config/Splunk/node_modules/splunkrepl/splunkrepl.js"]},
+                    "cwd": "/usr/bin",
+                    "external_id": "splunk"
+                    }
+                }
+            ]   
+        }]
+    }
+]
